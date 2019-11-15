@@ -22,17 +22,25 @@ public class Operators {
         // 3 * (5 + 4) + (6) = 33
 
         // Sprawdź czy użytkownik jest płenoletni
-        // -> jeżeli jego wiek jest >= 18 lat to wypisz jesteś pełnoletni
-        // -> w przeciwnym razie wypisz nie jesteś pełnoletni
+            // jeżeli wiek zawiera się w przedziale od 0 do 120 to sprawdzam czy jesteś dorosły
+                // -> jeżeli jego wiek jest >= 18 lat to wypisz jesteś pełnoletni
+                // -> w przeciwnym razie wypisz nie jesteś pełnoletni
+            // w przeciwnym razie
+                // -> nie jesteś człowiekiem
         int age;
         // Utworzenie obiektu Scanner pozwalającego na wprowadzenie wartości do konsoli -> System.in
         Scanner scanner = new Scanner(System.in);
         // użytkownik wprowadza wartośc do zmiennej age typu int metodą nextInt()
         System.out.println("Wprowadź swój wiek: ");
         age = scanner.nextInt();
+        // sprawdzenie czy jesteś człowiekiem
+        boolean isHuman = age >= 0 && age <= 120 ? true : false;
+        // sprawdzenie czy jesteś pełnoletni
         String isMature = age >= 18 ? "jesteś dorosły" : "nie jesteś dorosły";
-        // System.out.println("Twój wiek to: " + age + " - " + isMature);
-        System.out.printf("Twój wiek to: %d - %s\n", age, isMature);
+
+        System.out.println(isHuman ? isMature : "ROBOT");
+
+
 
 
     }
