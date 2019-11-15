@@ -1,5 +1,9 @@
 package variables;
 
+// CTRL + ALT + L -> autoformatowanie kodu
+
+import java.util.Scanner;
+
 public class Operators {
     public static void main(String[] args) {
         int i = 5;
@@ -14,7 +18,22 @@ public class Operators {
         // po wypisaniu
         System.out.println(j);
         // jaki wynik -> i = 6 j = 3
-        System.out.println("Wynik: " + ((j++)*(--i + j--) + (++i)));
+        System.out.println("Wynik: " + ((j++) * (--i + j--) + (++i)));
         // 3 * (5 + 4) + (6) = 33
+
+        // Sprawdź czy użytkownik jest płenoletni
+        // -> jeżeli jego wiek jest >= 18 lat to wypisz jesteś pełnoletni
+        // -> w przeciwnym razie wypisz nie jesteś pełnoletni
+        int age;
+        // Utworzenie obiektu Scanner pozwalającego na wprowadzenie wartości do konsoli -> System.in
+        Scanner scanner = new Scanner(System.in);
+        // użytkownik wprowadza wartośc do zmiennej age typu int metodą nextInt()
+        System.out.println("Wprowadź swój wiek: ");
+        age = scanner.nextInt();
+        String isMature = age >= 18 ? "jesteś dorosły" : "nie jesteś dorosły";
+        // System.out.println("Twój wiek to: " + age + " - " + isMature);
+        System.out.printf("Twój wiek to: %d - %s\n", age, isMature);
+
+
     }
 }
