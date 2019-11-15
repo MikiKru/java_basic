@@ -59,5 +59,23 @@ public class TypeString {
             System.out.println("index: " + index + " jest równy: " + (txt.length() - 1 - index));
         }
 
+        String login = "MikiKru";
+
+        System.out.println("małe litery: " + login.toLowerCase());
+        System.out.println("oryginał: " + login);
+        System.out.println(login.equals("mikikru"));
+        System.out.println(login.toUpperCase().equals("mikikru".toUpperCase()));
+
+        String sentence = "Być albo nie być oto jest pytanie";
+        // podziel zdanie na wyrazy
+        // separator -> spacja
+        String [] words = sentence.split(" ");
+        System.out.println(words[0]);
+        System.out.println(words[1]);
+        System.out.println(words[2]);
+        System.out.println(words[3]);
+        System.out.println(words[4]);
+        System.out.println(words[5]);
+        System.out.println(words[6]);
     }
 }
