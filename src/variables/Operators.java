@@ -34,11 +34,16 @@ public class Operators {
         System.out.println("Wprowadź swój wiek: ");
         age = scanner.nextInt();
         // sprawdzenie czy jesteś człowiekiem
-        boolean isHuman = age >= 0 && age <= 120 ? true : false;
+//        boolean isHuman = age >= 0 && age <= 120 ? true : false;
         // sprawdzenie czy jesteś pełnoletni
-        String isMature = age >= 18 ? "jesteś dorosły" : "nie jesteś dorosły";
+//        String isMature = age >= 18 ? "jesteś dorosły" : "nie jesteś dorosły";
 
-        System.out.println(isHuman ? isMature : "ROBOT");
+        System.out.println(
+                (age >= 0 && age <= 120 ? true : false) ?
+                        (age >= 18 ? "jesteś dorosły" : "nie jesteś dorosły") :
+                        "ROBOT"
+                            );
+
 
 
 
