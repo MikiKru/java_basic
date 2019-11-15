@@ -1,5 +1,7 @@
 package conditional_instructions;
 
+import java.util.Scanner;
+
 public class SimplyInstructions {
     public static void main(String[] args) {
         int age = 7555;
@@ -20,6 +22,28 @@ public class SimplyInstructions {
         // jeśli tak wypis parzysta
         // jeśli nie wypisz nieparzysta
         // jeśli zero wypis zero
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę: ");
+        int number = scanner.nextInt();
+
+        if(number == 0){
+            System.out.println("ZERO");
+        } else if (number % 2 == 0 ){
+            System.out.println("PARZYSTA");
+        } else {
+            System.out.println("NIEPARZYSTA");
+        }
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
