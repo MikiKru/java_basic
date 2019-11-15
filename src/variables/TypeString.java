@@ -27,6 +27,37 @@ public class TypeString {
 
         System.out.println(name1.equals(name2));
         System.out.println(name1.length() >= name2.length());
-        
+
+        String name = "Michał";
+        System.out.println("Przed: " + name);
+//        name.charAt(name.length() - 1) = 'l'; -> typ string jest niezmienny
+        name = name.replace("ł","l");
+        System.out.println("Po:" + name);
+//        name + "abc";
+        name = name + "abc";
+        System.out.println("Po złączeniu z abc: " + name);
+
+        // Sprawdzenie czy napis jest palindromem
+        String txt = "KAJIAK";
+        System.out.println(txt);
+        // utworzyliśmy obiekt klasy StringBuffer -> edytowalny String
+        StringBuffer editableTxt = new StringBuffer(txt);
+        // odwócenie kolejności liter w napisie
+        editableTxt.reverse();
+        // przypisanie odwóconego napisu do zmiennej String -> nieedytowalnej
+        String txtReversed = editableTxt.toString();
+        System.out.println(editableTxt);
+
+        System.out.println("Czy napis jest palindromem: " + txt.equals(txtReversed));
+
+        // inny sposób
+        for(int index = 0; index <= txt.length() - 1; index = index + 1) {
+            if(txt.charAt(index) != txt.charAt(txt.length() - 1 - index)){
+                System.out.println("Nie jest palindromem");
+                break;
+            }
+            System.out.println("index: " + index + " jest równy: " + (txt.length() - 1 - index));
+        }
+
     }
 }
