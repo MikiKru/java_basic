@@ -1,5 +1,6 @@
 package conditional_instructions;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class SimplyInstructions {
@@ -33,17 +34,7 @@ public class SimplyInstructions {
         } else {
             System.out.println("NIEPARZYSTA");
         }
-
-
-
-
-
-
-
-
-
-
-
-
+        // Generowanie daty aktualnej
+        System.out.println(LocalDate.now());
     }
 }
