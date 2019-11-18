@@ -17,5 +17,6 @@ public class Tables {
 //            System.out.println(name);
 //        }
         Arrays.stream(names).forEach(System.out::println);
+
     }
 }
