@@ -17,6 +17,15 @@ public class Main {
         userTwo.printUser();
         User userThree = new User("Anna", "Nowak", 'K', true, 8000);
         userThree.printUser();
+        userOne.salary_net = 9500.50;
+        System.out.println("=================================");
+        userOne.printUser();
+        userTwo.printUser();
+        userThree.printUser();
+        System.out.println("=================================");
+        double salaryGross = userOne.calculateSalaryGross();
+        System.out.println("salaryGross = " + salaryGross);
+        System.out.println("Calculated salary gross: " + userTwo.calculateSalaryGross());
 
     }
 }
