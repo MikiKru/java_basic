@@ -26,6 +26,8 @@ public class Main {
         double salaryGross = userOne.calculateSalaryGross();
         System.out.println("salaryGross = " + salaryGross);
         System.out.println("Calculated salary gross: " + userTwo.calculateSalaryGross());
+        System.out.println("=================================");
+        System.out.println(userThree.modifyUserParameters(15000,false));
 
     }
 }

@@ -29,6 +29,12 @@ public class User {
         double salaryGross = salary_net * 1.23;
         return salaryGross;
     }
+    String modifyUserParameters(double salary_net, boolean activated){
+        this.salary_net = salary_net;
+        this.activated = activated;
+        return String.format("| %10s | %15s | %3c | %6b | %8.2fzł |\n",
+                this.name, this.lastName, this.gender, this.activated,this.salary_net);
+    }
 
 
 }
