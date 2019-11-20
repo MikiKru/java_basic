@@ -13,5 +13,11 @@ public class Main {
         System.out.println(colour1.getB());
         System.out.println(colour1);
         System.out.println(colour1.getClass());
+
+        int dystans = 12345;
+        double km =  0;
+        km = dystans * 0.001;
+        System.out.println(km);
+
     }
 }
