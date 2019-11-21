@@ -10,7 +10,6 @@ public class User {
     public static void incrementGlobalId(){
         globalId++;
     }
-
     public User(String login, String password) {
         this.userId = globalId;
         this.login = login;
