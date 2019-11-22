@@ -34,6 +34,10 @@ public class AutoController {
                     autos.get(i).getFuelType(), autos.get(i).getPrice());
         }
     }
+    public Auto deleteAutoById(int id){
+        Auto deletedAuto = autos.remove(id - 1);
+        return deletedAuto;
+    }
 
 
 
