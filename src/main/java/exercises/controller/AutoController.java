@@ -35,8 +35,11 @@ public class AutoController {
         }
     }
     public Auto deleteAutoById(int id){
-        Auto deletedAuto = autos.remove(id - 1);
-        return deletedAuto;
+        if(id >= 1 && id < autos.size()) {
+            Auto deletedAuto = autos.remove(id - 1);
+            return deletedAuto;
+        }
+        return null;
     }
     public Auto findAutoById(int id){
         return autos.get(id - 1);

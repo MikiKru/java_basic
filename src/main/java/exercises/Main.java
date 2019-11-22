@@ -45,6 +45,11 @@ public class Main {
                     ac.printAllAutos();
                     break;
                 case 'U':
+                    System.out.println("Wybierz numer auta które chcesz usunąć:");
+                    ac.printAllAutos();
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Usunięto: " + ac.deleteAutoById(id));
                     break;
                 case 'R':
                     break;
