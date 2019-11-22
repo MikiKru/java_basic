@@ -1,4 +1,4 @@
-package exercises;
+package exercisesMath;
 
 public class MathLibrary {
     // 1. Zaimplementuj metodę zwracającą średnią wartości
