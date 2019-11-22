@@ -38,6 +38,24 @@ public class AutoController {
         Auto deletedAuto = autos.remove(id - 1);
         return deletedAuto;
     }
+    public Auto findAutoById(int id){
+        return autos.get(id - 1);
+    }
+    public Auto discountAutoById(int id, int discountPercent){
+        Auto discountingAuto = findAutoById(id);
+        discountingAuto.setPrice(discountingAuto.getPrice() * (100 - discountPercent)/100);
+        return discountingAuto;
+    }
+    public void changeAllAutosPrice(boolean isDiscounted, int discountPercent){
+        for (int i = 0; i < autos.size(); i++) {
+        if(isDiscounted){
+                autos.get(i).setPrice(autos.get(i).getPrice() * (100 - discountPercent)/100);
+            } else {
+            autos.get(i).setPrice(autos.get(i).getPrice() * (100 + discountPercent)/100);
+            }
+        }
+
+    }
 
 
 
