@@ -51,7 +51,7 @@ public class AutoController {
     public void changeAllAutosPrice(boolean isDiscounted, int discountPercent){
         for (int i = 0; i < autos.size(); i++) {
         if(isDiscounted){
-                discountAutoById(i, discountPercent);
+            autos.get(i).setPrice(autos.get(i).getPrice() * (100 - discountPercent)/100);
             } else {
             autos.get(i).setPrice(autos.get(i).getPrice() * (100 + discountPercent)/100);
             }

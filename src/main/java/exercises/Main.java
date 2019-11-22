@@ -54,6 +54,14 @@ public class Main {
                 case 'R':
                     break;
                 case 'C':
+                    System.out.println("(+) - podnieś cenę");
+                    System.out.println("( ) - obniż cenę cenę");
+                    boolean isDiscounted = scanner.nextLine().isEmpty();
+//                    scanner.nextLine();
+                    System.out.println("Wprowadź %");
+                    ac.changeAllAutosPrice(isDiscounted, scanner.nextInt());
+                    ac.printAllAutos();
+                    scanner.nextLine();
                     break;
                 case 'Q':
                     System.out.println("Do zobaczenia!");
