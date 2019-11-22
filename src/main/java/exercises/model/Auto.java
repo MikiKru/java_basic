@@ -1,5 +1,7 @@
 package exercises.model;
 
+import java.time.LocalDateTime;
+
 // 1. Utwórz klasę auto w której zadeklaruje następujące pola
 // - brand
 // - model
@@ -13,6 +15,7 @@ public class Auto {
     private Engine engineType;
     private Fuel fuelType;
     private double price;
+    private LocalDateTime dateAdded = LocalDateTime.now();
 
     public Auto(String brand, String model, Engine engineType, Fuel fuelType, double price) {
         this.brand = brand;
@@ -30,6 +33,14 @@ public class Auto {
                 ", fuelType=" + fuelType +
                 ", price=" + price +
                 '}';
+    }
+
+    public LocalDateTime getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(LocalDateTime dateAdded) {
+        this.dateAdded = dateAdded;
     }
 
     public String getBrand() {
