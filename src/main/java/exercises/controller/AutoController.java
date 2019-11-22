@@ -27,8 +27,10 @@ public class AutoController {
         return auto;
     }
     public void printAllAutos(){
-        for (Auto auto : autos){
-            System.out.println(auto);
+        for (int i = 0; i < autos.size(); i++){
+            System.out.printf("| %3d | %15s | %15s | %15s | %15s | %15.2fzł |",
+                    (i+1), autos.get(i).getBrand(), autos.get(i).getModel(), autos.get(i).getEngineType(),
+                    autos.get(i).getFuelType(), autos.get(i).getPrice());
         }
     }
 
