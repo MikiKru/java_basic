@@ -1,5 +1,7 @@
 package oop;
 
+import tests.TestsAnalysis;
+
 import java.util.Scanner;
 
 // Klasa główna - uruchomieniowa
@@ -41,6 +43,6 @@ public class Main {
         System.out.println("Wprowadź pensję:");
         double salary_net = scanner.nextDouble();
         User userFour = new User(name, lastName, gender,true, salary_net);
-        userFour.printUser();
+
     }
 }
