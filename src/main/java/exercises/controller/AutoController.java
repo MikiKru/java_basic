@@ -42,19 +42,17 @@ public class AutoController {
         return autos.get(id - 1);
     }
     public Auto discountAutoById(int id, int discountPercent){
-        Auto discountingAuto = findAutoById(id);
-        discountingAuto.setPrice(discountingAuto.getPrice() * (100 - discountPercent)/100);
-        return discountingAuto;
+        autos.get(id - 1).setPrice(autos.get(id -1 ).getPrice() * (100 - discountPercent)/100);
+        return autos.get(id - 1);
     }
     public void changeAllAutosPrice(boolean isDiscounted, int discountPercent){
         for (int i = 0; i < autos.size(); i++) {
         if(isDiscounted){
-                autos.get(i).setPrice(autos.get(i).getPrice() * (100 - discountPercent)/100);
+                discountAutoById(i, discountPercent);
             } else {
             autos.get(i).setPrice(autos.get(i).getPrice() * (100 + discountPercent)/100);
             }
         }
-
     }
 
 
