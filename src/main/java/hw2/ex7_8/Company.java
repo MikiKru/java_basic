@@ -40,5 +40,33 @@ public class Company {
         }
         return true;
     }
-
+    // metoda wyszukująca pracownika po numerze pesel
+    public Employee getEmployeeByPESEL(String PESEL){
+        for (Employee e : employees) {
+            if(e.getPESEL().equals(PESEL)){
+                return e;
+            }
+        }
+        return null;
+    }
+    // metoda wypisująca wszystkich pracowników
+    public void getEmployees(){
+        System.out.println("Lista pracowników");
+        for (Employee e : employees) {
+            System.out.println(e);
+        }
+    }
+    // zmiana pensji pracownikowy o określonym numerze pesel
+    public String setSalaryByPESEL(double salary, String PESEL){
+        Employee employee = getEmployeeByPESEL(PESEL);
+        if(employee != null) {
+            // sprawdzam na jakim indeksie w liście jest pracownik
+            int index = employees.indexOf(employee);
+            employee.setSalaryNet(salary);
+            // aktualizuję pracownika na tym samym indeksie
+            employees.set(index, employee);
+            return employee.toString();
+        }
+        return "Nie ma pracownika o takim numerze PESEL";
+    }
 }
