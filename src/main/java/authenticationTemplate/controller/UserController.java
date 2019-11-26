@@ -58,14 +58,17 @@ public class UserController {
     public String registerUser(String email, String password){
         String registerResult = "";
         if(emailValid(email)){
-
+            if(passwordValid(password) == null){
+                User user = new User(email,password);
+                InMemoryDB.tableUser.add(user);
+                registerResult = user.toString();
+            } else {
+                registerResult = passwordValid(password);
+            }
         } else {
             registerResult = "Błędny adres e-mail";
         }
-
-        User user = new User(email,password);
-        InMemoryDB.tableUser.add(user);
-        return user.toString();
+        return registerResult;
     }
 
 
