@@ -8,7 +8,7 @@ public class RegexStart {
         while(true) {
             System.out.println("Podaj adres email użytkownika");
             String email = new Scanner(System.in).nextLine();
-            String patternEmail = "^([a-z]|[A-Z]|[0-9]|[._#]|[^\\s\\t]){1,}@([a-z]|[A-Z]|[0-9]|[._#]|[^\\s\\t]){1,}\\.([a-z]|[A-Z]|[^\\s\\t]){2,}$";
+            String patternEmail = "^([a-z]|[A-Z]|[0-9]|[._#]|[^\\s\\t@]){1,}@([a-z]|[A-Z]|[0-9]|[._#]|[^\\s\\t@]){1,}\\.([a-z]|[A-Z]|[^\\s\\t@]){2,}$";
             String patternLowerCase = ".*[a-z]{1,}.*";
             String patternUpperCase = ".*[A-Z]{1,}.*";
             String patternDigit = ".*[0-9]{1,}.*";
