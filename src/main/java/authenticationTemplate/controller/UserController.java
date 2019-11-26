@@ -12,6 +12,16 @@ public class UserController {
                     u.getUserId(), u.getEmail(), u.getPassword(), u.getRegistrationDateTime());
         }
     }
+    // serwis do logowania użytkownika
+    public User logInUser(String email, String password){
+        User user = null;
+        for (User u : InMemoryDB.tableUser) {
+            if(u.getEmail().equals(email) && u.getPassword().equals(password) ){
+                user = u;
+            }
+        }
+        return user;
+    }
 
 
 
