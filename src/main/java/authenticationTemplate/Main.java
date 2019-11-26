@@ -14,6 +14,7 @@ public class Main {
         // próby rejestracji użytkownika
         System.out.println(uc.registerUser("x","x"));
         System.out.println(uc.registerUser("x@x.pl","xxxxxxxxxxxxA1-"));
+        System.out.println(uc.registerUser("x@x.pl","xxxxxxxxxxxxA1-"));
         uc.getAllUsers();
 
     }

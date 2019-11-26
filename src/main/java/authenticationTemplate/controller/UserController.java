@@ -55,13 +55,26 @@ public class UserController {
         }
         return passwordValidResult;
     }
+    public boolean isEmailUnique(String email){
+        boolean isUnique = true;
+        for (User u : InMemoryDB.tableUser) {
+            if(u.getEmail().equals(email)){
+                isUnique = false;
+            }
+        }
+        return isUnique;
+    }
     public String registerUser(String email, String password){
         String registerResult = "";
         if(emailValid(email)){
             if(passwordValid(password) == null){
-                User user = new User(email,password);
-                InMemoryDB.tableUser.add(user);
-                registerResult = user.toString();
+                if(isEmailUnique(email)) {
+                    User user = new User(email, password);
+                    InMemoryDB.tableUser.add(user);
+                    registerResult = user.toString();
+                } else {
+                    registerResult = "Już istnieje taki adres e-mail " + email + " w bazie danych";
+                }
             } else {
                 registerResult = passwordValid(password);
             }
